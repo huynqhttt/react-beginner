@@ -1,0 +1,10 @@
+/web/images/
+/web/bundles/
+/web/css/
+/web/js/
+/web/fonts/
+/web/dist/*
+!/node_modules
+/node_modules/*
+package-lock.json
+.idea/*
