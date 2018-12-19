@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         'babel-polyfill', 
-        './src/app-bundle/Resources/js/react/index'
+        './sources/react/App'
     ],
     output: {
         path: path.join(__dirname, 'dist'),

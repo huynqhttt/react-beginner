@@ -26,6 +26,7 @@ var vendorJs = [];
 var sassFile = [
     path.sources + '/sass/style.sass'
 ];
+var jsFiles = [];
 
 /**
  * Clean images folder
@@ -135,7 +136,7 @@ gulp.task('build-vendor-js', function() {
  * Compile and minify js App (app/Resources/js)
  */
 gulp.task('build-app-js', function() {
-    return gulp.src(desktopJs)
+    return gulp.src(jsFiles)
     .pipe(concat('app.js'))
     .pipe(uglify({mangle: true}))
     .pipe(rename({suffix: '.min'}))
@@ -146,7 +147,7 @@ gulp.task('build-app-js', function() {
  * Compile and minify js App (app/Resources/js) for dev
  */
 gulp.task('build-app-js-dev', function() {
-    return gulp.src(desktopJs)
+    return gulp.src(jsFiles)
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(uglify({mangle: true}))
@@ -170,7 +171,7 @@ gulp.task('build-react-dev', function() {
 
 gulp.task('build-react-prod', function() {
     return gulp.src([
-        path.app + '/js/react/dist/bundle.js'
+        path.sources + '/react/dist/bundle.js'
     ])
     .pipe(concat('react-bundle.min.js'))
     .pipe(gulp.dest('web/js/'));

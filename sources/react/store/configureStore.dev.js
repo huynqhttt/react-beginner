@@ -1,19 +1,19 @@
-import {
-    createStore,
-    applyMiddleware,
-    compose
-} from 'redux'
 import thunk from 'redux-thunk'
-import rootReducer from '../reducers'
-import DevTools from '../containers/DevTools'
+import DevTools from './DevTools'
 import promise from 'redux-promise'
+import { createBrowserHistory } from 'history'
+import { applyMiddleware, compose, createStore } from 'redux'
+import { routerMiddleware } from 'connected-react-router'
+import createRootReducer from '../reducers'
+
+const history = createBrowserHistory()
 
 export default function configureStore(preloadedState) {
     const store = createStore(
-        rootReducer,
+        createRootReducer(history),
         preloadedState,
         compose(
-            applyMiddleware(thunk, promise),
+            applyMiddleware(routerMiddleware(history), thunk, promise),
             DevTools.instrument()
         )
     )
