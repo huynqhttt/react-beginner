@@ -7,6 +7,12 @@
     "type": "git",
     "url": ""
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
   "scripts": {
     "start": "node sources/react/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack --progress -p --config sources/react/webpack-prod.config.js"

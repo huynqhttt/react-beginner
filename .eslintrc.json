@@ -1,15 +1,15 @@
 {
   "env": {
-    "react-native/react-native": true
+    "browser": true,
+    "node": true
   },
   "plugins": [
-    "react",
-    "react-native"
+    "react"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2017,
+    "ecmaVersion": 6,
     "ecmaFeatures": {
       "jsx": true,
       "modules": true,
@@ -17,8 +17,14 @@
     }
   },
   "rules": {
-    "react-native/no-unused-styles": 2,
-    "react-native/split-platform-components": 2,
-    "react-native/no-inline-styles": 2
+    "no-unused-styles": 2,
+    "split-platform-components": 2,
+    "no-inline-styles": 2,
+    "comma-spacing": 2,
+    "comma-dangle": 2,
+    "semi": 2,
+    "quotes": 2,
+    "jsx-quotes": 2,
+    "jsx-curly-spacing": 2
   }
 }
