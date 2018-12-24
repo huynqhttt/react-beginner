@@ -139,6 +139,19 @@ This style guide is mostly based on the standards that are currently prevalent i
         bar: 'bar'
     }
     ```
+  - Maximum line length is 80. [`eslint/max-len`](https://eslint.org/docs/rules/max-len)
+    ```jsx
+    // very long
+    var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
+    
+    //good
+    var foo = {
+        "bar": "This is a bar.",
+        "baz": { "qux": "This is a qux" },
+        "easier": "to read"
+    }
+    ```
+    
      
 
 ## Class vs `React.createClass` vs stateless
