@@ -748,17 +748,22 @@ We don’t recommend using indexes for keys if the order of items may change.
         }
 
         render() {
-            return <a href={this.props.url} data-id={this.props.id}>{this.props.text}</a>
+            return (
+                <a href={this.props.url} data-id={this.props.id}>
+                    {this.props.text}
+                </a>
+            )
         }
+    }
+    
+    Link.defaultProps = {
+        text: 'Hello World'
     }
 
     Link.propTypes = {
         id: PropTypes.number.isRequired,
         url: PropTypes.string.isRequired,
         text: PropTypes.string,
-    }
-    Link.defaultProps = {
-        text: 'Hello World'
     }
     ```
 
