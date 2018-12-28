@@ -108,7 +108,7 @@ This style guide is mostly based on the standards that are currently prevalent i
   - No semicolons.
     ```jsx
     // bad 
-    window.alert('hi')
+    window.alert('hi');
     
     //good
     window.alert('hi') 
