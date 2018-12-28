@@ -1,4 +1,4 @@
-# Airbnb React/JSX Style Guide
+# Airbnb React/JSX Style Guide ([reference](`https://github.com/airbnb/javascript`))
 
 *A mostly reasonable approach to React and JSX*
 
