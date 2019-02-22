@@ -31,7 +31,7 @@ This style guide is mostly based on the standards that are currently prevalent i
   
 ## Standard Javascript Rules
 
-  - **Use 2 spaces** for indentation.
+  - **Use 4 spaces** for indentation.
     ```jsx
      function hello (name) {
         console.log('hi ' + name)
